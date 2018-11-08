@@ -1,20 +1,5 @@
 function mat = yue_bifur(fun,x0,a0,a1,N,L,p_siz)
 
-% Function yue_bifur: plots 1D bifurcation figure
-% Input: fun = some function @(x,para)
-%        x0 = initial value of x
-%        a0 = the start value of parameter a
-%        a1 = the end value of parameter a
-%         N = the number of intervals for parameter
-%         L = the number of iterations for each initial pair 
-%               of (x0,parameter a)
-%        p_siz = the marker size, default 1
-% Output: mat = bifucation matrix with size N by L
-%               which stores a length L sequence 
-%               for each pair of (x0,parameter a)
-%                
-% -------------------------------------------------
-% Demo: 
 % fun = @(x,r) r*x*(1-x); 
 % x0 = .4; a0 = 0; a1 = 4; N = 100; L = 50;
 % mat = yue_bifur(fun,x0,a0,a1,N,L);
