@@ -1,10 +1,5 @@
 function mat = yue_bifur(fun,x0,a0,a1,N,L,p_siz)
-% -------------------------------------------------
-% By Yue Wu
-% ECE Dept, Tufts University
-% 03/03/2010
-% All copyrights reserved
-% -------------------------------------------------
+
 % Function yue_bifur: plots 1D bifurcation figure
 % Input: fun = some function @(x,para)
 %        x0 = initial value of x
