@@ -24,8 +24,8 @@ function mat = yue_bifur(fun,x0,a0,a1,N,L,p_siz)
 % x0 = .4; a0 = 0; a1 = 4; N = 100; L = 50;
 % mat = yue_bifur(fun,x0,a0,a1,N,L);
 % -------------------------------------------------Experiments-----
-   fun = @(x,r) r*x*(1-x);   % logistic map set a1=4
-%pai = 3.14;
+%fun = @(x,r) r*x*(1-x);   % logistic map set a1=4
+pai = 3.14;
 
 
 %fun = @(x,r) r*sin(pai*x); %sin map set a1=1
@@ -33,7 +33,8 @@ function mat = yue_bifur(fun,x0,a0,a1,N,L,p_siz)
 %fun = @(x,r) cos(r*arccos(x)); %chebyshev map
  x0 = 0.2; a0 = 0; a1 = 4; N = 1000; L = 50;
  
-
+  fun = @(x,r) mod(((r*x*(1-x))+(1+x)*(tan(pai*x))),1);
+ 
 % default settings
 if ~exist('p_siz','var')
     p_siz = 2;
@@ -67,6 +68,3 @@ dcolor = [0,0,1]; % Marker color setting: blue
 surf(r,c,mat,'Marker','*','MarkerSize',p_siz,'FaceColor','None','MarkerEdgeColor', dcolor,'EdgeColor','None')
 view([90,0,0]) % change camera direction
 ylim([a0,a1]) % fit to data
-ylabel('\mu')
-xlabel('Xn')
-
